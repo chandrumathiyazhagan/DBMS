@@ -11,10 +11,39 @@
 6. End the begin section.
 
 ### Program:
-
-
+```
+Developed By: M.CHANDRU
+Register number: 212222230026
+```
+## Create employee table:
+create table EMPLOYEE1(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
+## Insert values into employee table:
+insert into EMPLOYEE1(empid,empname,dept,salary) values(1,'Chandru','HR',2500000);
+insert into EMPLOYEE1(empid,empname,dept,salary) values(2,'Chethan','MD',950000);
+insert into EMPLOYEE1(empid,empname,dept,salary) values(3,'Dileep','HR',800000);
+## Create salary_log table
+create table salary_log (log_id NUMBER , empid NUMBER,empname VARCHAR(10),old_salary NUMBER,new_salary NUMBER,update_date DATE);
+PLSQL Trigger code
+## create or replace trigger log_salary_update
+  2      before update on EMPLOYEE1
+  3      for each row
+  4      declare
+  5      v_old_salary number;
+  6      v_new_salary number;
+  7      begin
+  8      v_old_salary := :OLD.salary;
+  9      v_new_salary := :NEW.salary;
+ 10      if v_old_salary <> v_new_salary then
+ 11      insert into salary_log(empid,empname,old_salary,new_salary,update_date)values(:OLD.empid,:OLD.empname,v_old_salary,v_new_salary,SYSDATE);
+ 12      end if;
+ 13      end;
+ 14      /
+## Update the salary of an employee:
+update EMPLOYEE1 set salary = 97000 where empid = 2;
+## Display the salary_log table:
+select * from salary_log;
 ### Output:
-
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/85d87bab-6ebc-499e-aee9-4f7fa9cd55b8)
 
 ### Result:
 Thust the program was performed sucessfully.
