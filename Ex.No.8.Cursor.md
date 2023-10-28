@@ -20,9 +20,9 @@ CREATE TABLE employee(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10), salar
 ```
 ### Insert values into employee table:
 ```python
-INSERT INTO employee VALUES(1,'Dileep','HR',600000);
-INSERT INTO employee VALUES(2,'Anji','MD',950000);
-INSERT INTO employee VALUES(3,'Jaggu','Finance',800000);
+INSERT INTO employee VALUES(1,'chandru','HR',600000);
+INSERT INTO employee VALUES(2,'chethan','MD',950000);
+INSERT INTO employee VALUES(3,'lokesh','Finance',800000);
 ```
 ### SQL Cursor code:
 ```python
