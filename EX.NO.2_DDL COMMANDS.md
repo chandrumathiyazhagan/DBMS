@@ -23,49 +23,60 @@ To create a student database and execute DDL queries using SQL.
 ## Query:
 
 Developed by:M.CHANDRU
+
 Register No: 212222230026
 
 ### 1) Create a database 
+
 ### SQL QUERY:
+```python
 use chandrumk
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/33a2f6cf-297a-4794-8bc5-6b35d5d839e7)
 
 ### 2) Create a table student  and insert any two rows with the following fieds RegisterNumber,Name,Age,Address,Phone number
 
 ### SQL QUERY: 
+```python
 create table STUDENT(S_Roll_no int,S_Name char(20),S_Age int,S_Address char(30),S_Phone_no int);
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/546b7d10-2f3d-458c-93e1-263c178605ac)
 
 ### 3) Alter the above student table by adding another attribute department
 
 ### SQL QUERY: 
+```python
 alter table STUDENT add S_Dept char(10);
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/7a6f43c2-7722-4ccc-9c50-187dec02d321)
 
 ### 4) Rename the student table to mystudent
 
 ### SQL QUERY: 
+```python
 rename table STUDENT to MYSTUDENT;
-
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/4caaee67-1fe4-4a30-acfe-0fff0dd693ab)
 
 ### 5) Delete the mystudent rows using truncate keyword
 
 ### SQL QUERY: 
+```python
  truncate table STUDENT;
-
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/34efe174-772c-4be9-80f5-3b82a131252e)
 
 ### 6) Drop the mystudent table
  
 ### SQL QUERY: 
+```python
  drop table MYSTUDENT;
-
+```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/07813b5d-909c-424f-94fc-769b28adebfd)
 
