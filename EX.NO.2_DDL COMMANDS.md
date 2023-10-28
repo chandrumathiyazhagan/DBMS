@@ -82,4 +82,4 @@ rename table STUDENT to MYSTUDENT;
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/07813b5d-909c-424f-94fc-769b28adebfd)
 
 ## Result:
-         Thus the basic DDL commands in SQL are executed. 
+Thus the basic DDL commands in SQL are executed. 
