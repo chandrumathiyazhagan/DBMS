@@ -10,6 +10,11 @@
 5. End the begin section.
 
 ### Program:
+
+Developed By : M.CHANDRU
+
+Register number: 212222230026
+
 Create employee table:
 ```python
 CREATE TABLE employee(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10), salary NUMBER);
