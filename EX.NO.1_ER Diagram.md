@@ -20,6 +20,10 @@
 
 ### SQL DDL Schema 
 ```
+Developed by:M.CHANDRU
+Register No: 212222230026
+```
+```
 CREATE TABLE bank
 (
   code INT NOT NULL,
