@@ -43,6 +43,7 @@ create table STUDENT(S_Roll_no int,S_Name char(20),S_Age int,S_Address char(30),
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/546b7d10-2f3d-458c-93e1-263c178605ac)
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/b54338cb-c3e0-4a0a-908b-516c499aacbe)
 
 ### 3) Alter the above student table by adding another attribute department
 
