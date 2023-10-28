@@ -12,20 +12,19 @@
 ### Program:
 
 Developed By : M.CHANDRU
-
 Register number: 212222230026
 
-Create employee table:
+### Create employee table:
 ```python
 CREATE TABLE employee(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10), salary NUMBER);
 ```
-Insert values into employee table:
+### Insert values into employee table:
 ```python
 INSERT INTO employee VALUES(1,'Dileep','HR',600000);
 INSERT INTO employee VALUES(2,'Anji','MD',950000);
 INSERT INTO employee VALUES(3,'Jaggu','Finance',800000);
 ```
-SQL Cursor code:
+### SQL Cursor code:
 ```python
 set serveroutput on
 declare
