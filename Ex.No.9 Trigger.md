@@ -10,22 +10,22 @@
 5. Display the result 
 6. End the begin section.
 
-### Program:
+## Program:
 ```
 Developed By: M.CHANDRU
 Register number: 212222230026
 ```
-## Create employee table:
+### Create employee table:
 ```python
 create table EMPLOYEE1(empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
 ```
-## Insert values into employee table:
+### Insert values into employee table:
 ```python
 insert into EMPLOYEE1(empid,empname,dept,salary) values(1,'Chandru','HR',2500000);
 insert into EMPLOYEE1(empid,empname,dept,salary) values(2,'Chethan','MD',950000);
 insert into EMPLOYEE1(empid,empname,dept,salary) values(3,'Dileep','HR',800000);
 ```
-## Create salary_log table
+### Create salary_log table
 ```python
 create table salary_log (log_id NUMBER , empid NUMBER,empname VARCHAR(10),old_salary NUMBER,new_salary NUMBER,update_date DATE);
 ```
@@ -46,15 +46,15 @@ create or replace trigger log_salary_update
  13      end;
  14      /
 ```
-## Update the salary of an employee:
+### Update the salary of an employee:
 ```python
 update EMPLOYEE1 set salary = 97000 where empid = 2;
 ```
-## Display the salary_log table:
+### Display the salary_log table:
 ```python
 select * from salary_log;
 ```
-### Output:
+## Output:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/111a0906-e5e0-42e7-82b2-c06501aea99e)
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/797beef0-8c53-4381-9913-793a49fb89ad)
 
