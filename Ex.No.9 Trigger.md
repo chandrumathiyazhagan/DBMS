@@ -55,7 +55,8 @@ update EMPLOYEE1 set salary = 97000 where empid = 2;
 select * from salary_log;
 ```
 ### Output:
-![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/85d87bab-6ebc-499e-aee9-4f7fa9cd55b8)
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/111a0906-e5e0-42e7-82b2-c06501aea99e)
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/797beef0-8c53-4381-9913-793a49fb89ad)
 
 ### Result:
 Thust the program was performed sucessfully.
