@@ -93,7 +93,7 @@ SELECT ename,job,sal FROM emp WHERE sal = (SELECT MIN(sal) FROM emp);
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 ### QUERY:
 ```python
-CREATE VIEW empv5 AS SELECT empno,ename,job FROM emp WHERE deptno = 10;
+CREATE VIEW empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO = 10;
 SELECT * FROM empv5;
 ```
 ### OUTPUT:
