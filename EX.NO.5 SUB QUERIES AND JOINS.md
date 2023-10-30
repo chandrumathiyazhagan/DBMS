@@ -94,7 +94,7 @@ SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM EMP);
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
 ### QUERY:
 ```python
-CREATE VIEW empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO = 10;
+create view empv5 as select EMPNO,ENAME,JOB from EMP where DEPTNO = 10;
 SELECT * FROM empv5;
 ```
 ### OUTPUT:
@@ -103,10 +103,12 @@ SELECT * FROM empv5;
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
 ### QUERY:
 ```python
-![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/a6e4f8c8-b6df-4da8-9bdf-4e89ad24a50b)
-
+create view empv30 AS select EMPNO,ENAME,SAL from EMP where DEPTNO=30;
+SELECT * FROM empv30;
 ```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/f749bcac-3800-4229-83e8-7610cee78d70)
+
 ### Q6) Update the view empv5 by increasing 10% salary of the employees who work as ‘CLERK’. Also confirm the modifications in emp table
 ### QUERY:
 ```python
