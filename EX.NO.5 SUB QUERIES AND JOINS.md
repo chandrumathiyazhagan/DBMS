@@ -1,6 +1,6 @@
 # EX.NO.6 SubQueries, Views and Joins 
 ### DATE
-### AIM:
+## AIM:
 ### To use SubQueries, Views and Joins in SQL 
 ## Create employee Table
 ```sql
