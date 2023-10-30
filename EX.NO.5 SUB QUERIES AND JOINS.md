@@ -179,8 +179,10 @@ SELECT s.salesman_id,s.name,s.city,s.commission,c.cust_name,c.grade FROM Salesma
 SELECT s.salesman_id,s.name,s.city,s.commission,c.cust_name,c.grade FROM Salesman1 s RIGHT JOIN Customer1 c ON s.salesman_id=c.salesman_id;
 ```
 ### OUTPUT:
+LEFT JOIN 
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/51ec4d32-fe45-415e-a288-5ff371915729)
+RIGHT JOIN 
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/53496da8-fe63-464a-a95c-9d507e73d510)
 
-## RESULT 
+## RESULT :
 ### Thus the basics of subqueries,views,joins are performed in SQL.
