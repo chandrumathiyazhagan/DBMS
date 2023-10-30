@@ -11,7 +11,7 @@
 
 ### Program:
 ```python
---To find the greatest number
+--To find the Biggest number
 -- among given three numbers
 DECLARE
 	--a assigning with 10
@@ -25,17 +25,17 @@ BEGIN
 	--If condition start
 	IF a > b
 	AND a > c THEN
-	--if a is greater then print a
-	dbms_output.Put_line('Greatest number is '
+	--if a is Bigger then print a
+	dbms_output.Put_line('Biggest number is '
 						||a);
 	ELSIF b > a
 		AND b > c THEN
-	--if b is greater then print b
-	dbms_output.Put_line('Greatest number is '
+	--if b is Bigger then print b
+	dbms_output.Put_line('Biggest number is '
 						||b);
 	ELSE
-	--if c is greater then print c
-	dbms_output.Put_line('Greatest number is '
+	--if c is Bigger then print c
+	dbms_output.Put_line('Biggest number is '
 						||c);
 	END IF;
 --end if condition
@@ -43,7 +43,7 @@ END;
 --End program
 ```
 ### Output:
-![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/96b35c25-a3f5-4c48-bdb0-80e2cb7b42ae)
+![Uploading image.png…]()
 
 ### Result:
 Thust the program was performed sucessfully.
