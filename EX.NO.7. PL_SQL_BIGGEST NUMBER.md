@@ -45,6 +45,5 @@ END;
 ### Output:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/040f0d71-be51-4843-8166-94a8b7ebfae9)
 
-
 ### Result:
 Thust the program was performed sucessfully.
