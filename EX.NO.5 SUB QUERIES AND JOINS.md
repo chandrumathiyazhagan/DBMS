@@ -70,14 +70,14 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 ### Q1) List the name of the employees whose salary is greater than that of employee with empno 7566.
 ### QUERY:
 ```python
- SELECT ename FROM emp WHERE sal > (SELECT sal FROM emp WHERE empno = 7566);
+ SELECT ename FROM EMP WHERE sal > (SELECT sal FROM EMP WHERE empno = 7566);
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/e948e218-906f-4c37-866c-c3d7a9073d56)
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
 ### QUERY:
 ```python
-SELECT ename,job,sal FROM emp WHERE sal = (SELECT MIN(sal) FROM emp);
+SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM emp);
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/c9dca84c-8072-4c6b-bc8a-199d6eb2bdc0)
