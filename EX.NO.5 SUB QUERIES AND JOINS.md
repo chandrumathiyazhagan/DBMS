@@ -77,7 +77,7 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
 ### QUERY:
 ```python
-SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM emp);
+SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM EMP);
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/c9dca84c-8072-4c6b-bc8a-199d6eb2bdc0)
@@ -86,7 +86,7 @@ SELECT ename,job,sal FROM EMP WHERE sal = (SELECT MIN(sal) FROM emp);
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
 ### QUERY:
 ```python
- SELECT ename,job FROM emp WHERE deptno = 10 AND job IN (SELECT job FROM emp WHERE job = 'sales');
+ SELECT ename,job FROM EMP WHERE deptno = 10 AND job IN (SELECT job FROM EMP WHERE job = 'sales');
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/5f306407-d295-4bf4-bf1c-23cac38cc479)
