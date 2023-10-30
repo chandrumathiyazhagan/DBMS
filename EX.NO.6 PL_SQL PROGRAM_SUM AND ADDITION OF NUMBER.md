@@ -30,6 +30,7 @@ END;
 /
 ```
 ### Output:
-![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/225cf964-b4e2-4e14-bc54-97ce0ddf8b5d)
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/bf89b14c-2038-4863-b867-e6cad508d95d)
+
 ### Result:
 Thust the program was performed sucessfully.
