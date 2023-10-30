@@ -10,10 +10,27 @@
 5. End the begin section.
 
 ### Program:
+```python
+DECLARE
+  num1 NUMBER := 10; -- Replace 10 with the first number you want to use
+  num2 NUMBER := 5;  -- Replace 5 with the second number you want to use
+  sum_result NUMBER;
+  difference_result NUMBER;
+BEGIN
+  -- Addition
+  sum_result := num1 + num2;
 
+  -- Subtraction
+  difference_result := num1 - num2;
 
+  -- Display the results
+  DBMS_OUTPUT.PUT_LINE('The Addition of ' || num1 || ' and ' || num2 || ' is ' || sum_result);
+  DBMS_OUTPUT.PUT_LINE('The Subraction between ' || num1 || ' and ' || num2 || ' is ' || difference_result);
+END;
+/
+```
 ### Output:
-
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/225cf964-b4e2-4e14-bc54-97ce0ddf8b5d)
 
 ### Result:
 Thust the program was performed sucessfully.
