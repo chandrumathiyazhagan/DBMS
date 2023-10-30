@@ -67,48 +67,54 @@ INSERT INTO DEPT (DEPTNO, DNAME, LOC) VALUES (40, 'OPERATIONS', 'BOSTON');
 ```
 
 ### Q1) List the name of the employees whose salary is greater than that of employee with empno 7566.
-
-
 ### QUERY:
-
-
+```python
+ SELECT ename FROM emp WHERE sal > (SELECT sal FROM emp WHERE empno = 7566);
+```
 ### OUTPUT:
-
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/e948e218-906f-4c37-866c-c3d7a9073d56)
 ### Q2) List the ename,job,sal of the employee who get minimum salary in the company.
-
 ### QUERY:
-
-
+```python
+SELECT ename,job,sal FROM emp WHERE sal = (SELECT MIN(sal) FROM emp);
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/c9dca84c-8072-4c6b-bc8a-199d6eb2bdc0)
+
 
 ### Q3) List ename, job of the employees who work in deptno 10 and his/her job is any one of the job in the department ‘SALES’.
-
 ### QUERY:
-
-
+```python
+ SELECT ename,job FROM emp WHERE deptno = 10 AND job IN (SELECT job FROM emp WHERE job = 'sales');
+```
 ### OUTPUT:
-
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/5f306407-d295-4bf4-bf1c-23cac38cc479)
 
 ### Q4) Create a view empv5 (for the table emp) that contains empno, ename, job of the employees who work in dept 10.
-
 ### QUERY:
-
-
+```python
+CREATE VIEW empv5 AS SELECT empno,ename,job FROM emp WHERE deptno = 10;
+SELECT * FROM empv5;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/9ac6789c-0e6f-4a4c-9bb7-a7eee35ffad5)
 
 ### Q5) Create a view with column aliases empv30 that contains empno, ename, sal of the employees who work in dept 30. Also display the contents of the view.
-
 ### QUERY:
+```python
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/a6e4f8c8-b6df-4da8-9bdf-4e89ad24a50b)
 
-
+```
 ### OUTPUT:
-
 ### Q6) Update the view empv5 by increasing 10% salary of the employees who work as ‘CLERK’. Also confirm the modifications in emp table
-
 ### QUERY:
-
-
+```python
+DROP view empv5;
+UPDATE emp SET sal=sal+(sal*0.10) WHERE job='CLERK';
+CREATE VIEW empv5 AS SELECT empno,ename,sal,job FROM emp WHERE deptno = 10;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/eb36516d-1e89-4c9f-b8b5-89990c49f406)
 
 ## Create a Customer1 Table
 ```sql
@@ -139,33 +145,39 @@ INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5007, 'Paul A
 INSERT INTO Salesman1 (salesman_id, name, city, commission) VALUES(5003, 'Lauson Hen', 'San Jose', 0.12);
 ```
 ### Q7) Write a SQL query to find the salesperson and customer who reside in the same city. Return Salesman, cust_name and city.
-
 ### QUERY:
-
-
+```python
+ SELECT s.name AS "Salesman", c.cust_name, s.city FROM Salesman1 s, Customer1 c WHERE s.city=c.city;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/7d5bacf4-49d4-420b-be03-e419635f18a9)
 
 ### Q8) Write a SQL query to find salespeople who received commissions of more than 13 percent from the company. Return Customer Name, customer city, Salesman, commission.
-
-
 ### QUERY:
-
-
+```python
+SELECT c.cust_name AS "Customer name", c.city AS "Customer city", s.name AS "Salesman", s.commission FROM Salesman1 s INNER JOIN Customer1 c ON s.city=c.city WHERE s.commission > 0.13;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/0108895e-16a6-48fc-bd35-d8ad08ed924f)
 
 ### Q9) Perform Natural join on both tables
-
 ### QUERY:
-
-
+```python
+SELECT * FROM Salesman1 s NATURAL JOIN Customer1 c;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/6500de9c-b24f-44b0-bbe6-df505656df86)
 
 ### Q10) Perform Left and right join on both tables
-
 ### QUERY:
+```python
+SELECT s.salesman_id,s.name,s.city,s.commission,c.cust_name,c.grade FROM Salesman1 s LEFT JOIN Customer1 c ON s.salesman_id=c.salesman_id;
 
-
+SELECT s.salesman_id,s.name,s.city,s.commission,c.cust_name,c.grade FROM Salesman1 s RIGHT JOIN Customer1 c ON s.salesman_id=c.salesman_id;
+```
 ### OUTPUT:
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/51ec4d32-fe45-415e-a288-5ff371915729)
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/53496da8-fe63-464a-a95c-9d507e73d510)
 
 ## RESULT 
 ### Thus the basics of subqueries,views,joins are performed in SQL.
