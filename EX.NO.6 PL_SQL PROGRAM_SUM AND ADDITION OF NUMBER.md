@@ -31,6 +31,5 @@ END;
 ```
 ### Output:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/225cf964-b4e2-4e14-bc54-97ce0ddf8b5d)
-
 ### Result:
 Thust the program was performed sucessfully.
