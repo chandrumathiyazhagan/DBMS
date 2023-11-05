@@ -72,7 +72,8 @@ SELECT * FROM Supplier;
 ```
 ### OUTPUT:
 ![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/987d5e7d-7bb0-4f5e-a643-ec8c74b0837c)
-![Uploading image.png…]()
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/5309ba2c-8ccd-43fa-83f0-e6695e36a744)
+
 
 ### 7) Drop the sequence
 ### SQL QUERY: 
@@ -80,7 +81,7 @@ SELECT * FROM Supplier;
 DROP SEQUENCE S2;
 ```
 ### OUTPUT:
-![Uploading image.png…]()
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/5d59dfbf-e10c-48bd-9447-9e327b800510)
 
 ## RESULT :
 ### Thus the sequence and synonym created and used in SQL.
