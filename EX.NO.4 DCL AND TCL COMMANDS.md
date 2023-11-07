@@ -19,74 +19,93 @@ To create a manager database and execute DML queries using SQL.
 ### Q1) Create a table employee with employee id ,name and Address
 
 ### QUERY:
-
+ CREATE TABLE employee (employee_id INT PRIMARY KEY,name VARCHAR(50),address VARCHAR(100));
 
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/6c171012-85eb-4b32-8172-b7c0247e7bbc)
 
 ### Q2) Insert three rows into emploee table 
 
 
 ### QUERY:
-
-
+ INSERT INTO employee (employee_id, name, address)VALUES (1, 'John Doe', '123 Main St');
+ INSERT INTO employee (employee_id, name, address)VALUES (2, 'Jane Smith', '456 Elm St');
+ INSERT INTO employee (employee_id, name, address)VALUES (3, 'Alice Johnson', '789 Oak St');
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/c73b414d-787c-4d98-a6e2-730d0eed9dc1)
 
 ### Q3) Start the transaction and create a save point s1.
 
 ### QUERY:
-
-
+ START TRANSACTION;
+SAVEPOINT s1;
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/7715421c-5f61-42f3-84b6-0a435751f06d)
 
 ### Q4) Perform insertion into employee table.
 
 ### QUERY:
-
+INSERT INTO employee (employee_id, name, address)VALUES(4, 'Bob Williams', '101 Pine St');
 
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/2c5ed06d-3000-4b05-adb2-882132d4affd)
 
 
 ### Q6)	Display the employee table and create a save point s2 .
 
 
 ### QUERY:
-
-
+ SELECT * FROM employee;
+ SAVEPOINT s2;
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/d225854b-78d3-42e4-8e27-24f0e71e2cc8)
 
 
 ### Q7)	Perform updation on any one of the row.
 
 
 ### QUERY:
-
+ UPDATE employee SET address = 'New Address'WHERE employee_id = 1;
 
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/db8220bc-2443-40ff-b926-caeed3919a94)
 
 
 ### Q8) Display the employee table and rollback to  save point s2 
 
 
 ### QUERY:
-
-
+SELECT * FROM employee;
+ROLLBACK TO s2;
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/422b3a7e-7d16-4c3f-aa6a-5bad143c1ba0)
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/f3bf3dc5-e4bb-447a-8bbd-02b819633db4)
 
 
 ### Q9) Display the employee table and commit the changes; 
 
 
 ### QUERY:
-
-
+SELECT * FROM employee;
+COMMIT;
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/a6c6b3b5-722e-4f9f-a6f1-852cd54f5ff7)
 
 
 ### Q10) Rollback to save point s1;
 
 
 ### QUERY:
-
+ROLLBACK TO s1;
 
 ### OUTPUT:
 
@@ -95,7 +114,8 @@ To create a manager database and execute DML queries using SQL.
 
 
 ### QUERY:
-
+ CREATE USER new_user IDENTIFIED BY 'password';
+ GRANT INSERT, UPDATE ON your_database.employee TO new_user;
 
 ### OUTPUT:
 
@@ -104,14 +124,16 @@ To create a manager database and execute DML queries using SQL.
 
 
 ### QUERY:
-
+SHOW GRANTS FOR new_user;
 
 ### OUTPUT:
+
+![image](https://github.com/chandrumathiyazhagan/DBMS/assets/119393023/adeeb4c6-03a0-4a21-9620-a00a479a00ad)
 
 ### Q13) Revoke the privillages.
 
 ### QUERY:
-
+ REVOKE INSERT, UPDATE ON your_database.employee FROM new_user;
 
 ### OUTPUT:
 
